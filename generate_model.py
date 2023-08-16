@@ -1,14 +1,14 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split, cross_val_predict, cross_val_score
 from sklearn.metrics import r2_score, mean_squared_error, accuracy_score, f1_score
 from sklearn.linear_model import LinearRegression
-import math
+# import math
 from itertools import combinations
 from sklearn.linear_model import LogisticRegression
-from sklearn.cluster import KMeans
+# from sklearn.cluster import KMeansun
 from sklearn.metrics import silhouette_score
 
 def preparing_data():
@@ -118,7 +118,7 @@ def finalizing_data(data):
     y_pred_proba = model.predict_proba(x_test)[:, 1]
 
     accuracy = accuracy_score(y_test, y_pred)
-    return (accuracy, x_test)
+    return (accuracy, x_test.to_dict(orient="records"))
 
 
 

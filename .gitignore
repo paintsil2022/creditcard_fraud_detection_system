@@ -1,0 +1,4 @@
+.venv
+fraudTrain.csv
+fraudTest.csv
+__pycache__
